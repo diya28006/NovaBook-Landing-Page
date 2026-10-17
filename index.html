@@ -1,0 +1,467 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>NovaBook | Power Meets Simplicity</title>
+  <meta name="description" content="Discover NovaBook, a lightweight laptop designed for work, study and creativity.">
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #172033;
+      background-color: #ffffff;
+    }
+
+    .brand {
+      color: #2563eb;
+      font-size: 26px;
+      font-weight: bold;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #eff6ff, #ffffff);
+    }
+
+    .section-title {
+      font-size: 32px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .section-description {
+      color: #64748b;
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 35px;
+      line-height: 1.7;
+    }
+
+    .feature-card {
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 25px;
+      background: white;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+    }
+
+    .feature-icon {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .review-card {
+      background: #f8fafc;
+      padding: 25px;
+      border-radius: 16px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .primary-button {
+      display: inline-block;
+      background: #2563eb;
+      color: white;
+      padding: 13px 24px;
+      border-radius: 9px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .primary-button:hover {
+      background: #1d4ed8;
+    }
+
+    .nav-link {
+      color: #475569;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav-link:hover {
+      color: #2563eb;
+    }
+
+    .laptop-image {
+      width: 100%;
+      max-width: 560px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    #mobile-menu {
+      display: none;
+    }
+
+    #mobile-menu.open {
+      display: flex;
+    }
+
+    @media (max-width: 767px) {
+      .section-title {
+        font-size: 26px;
+      }
+
+      .hero-heading {
+        font-size: 38px !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="sticky top-0 z-50 bg-white border-b border-slate-200">
+    <nav class="max-w-7xl mx-auto px-5 py-4 flex items-center justify-between">
+
+      <a href="#home" class="brand">NovaBook.</a>
+
+      <div class="hidden md:flex items-center gap-7">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#benefits" class="nav-link">Benefits</a>
+        <a href="#reviews" class="nav-link">Reviews</a>
+        <a href="#pricing" class="primary-button">Buy Now</a>
+      </div>
+
+      <button
+        id="menu-button"
+        class="md:hidden border rounded-lg px-3 py-2"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu">
+        ☰ Menu
+      </button>
+    </nav>
+
+    <div id="mobile-menu" class="flex-col gap-4 px-5 pb-5 md:hidden">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#features" class="nav-link">Features</a>
+      <a href="#benefits" class="nav-link">Benefits</a>
+      <a href="#reviews" class="nav-link">Reviews</a>
+      <a href="#pricing" class="nav-link">Pricing</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="max-w-7xl mx-auto px-5 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center">
+
+        <div>
+          <p class="text-blue-600 font-bold mb-4">
+            MEET YOUR NEXT LAPTOP
+          </p>
+
+          <h1 class="hero-heading text-5xl font-bold leading-tight mb-6">
+            Power Meets <span class="text-blue-600">Simplicity.</span>
+          </h1>
+
+          <p class="text-slate-600 text-lg leading-8 mb-8">
+            Meet NovaBook — a stylish, lightweight laptop built for
+            students, professionals and creators. Work smarter,
+            learn faster and bring your ideas to life.
+          </p>
+
+          <div class="flex flex-wrap gap-4">
+            <a href="#pricing" class="primary-button">Buy Now →</a>
+            <a href="#features" class="border border-slate-300 rounded-lg px-6 py-3 font-bold hover:bg-white">
+              Explore Features
+            </a>
+          </div>
+
+          <p class="text-sm text-slate-500 mt-6">
+            Lightweight design · Everyday performance
+          </p>
+        </div>
+
+        <div class="flex justify-center">
+          <img
+            class="laptop-image"
+            src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=1200&q=85"
+            alt="Laptop displayed on a clean desk"
+            fetchpriority="high">
+        </div>
+
+      </div>
+    </section>
+
+    <section id="features" class="py-20 px-5">
+      <div class="max-w-7xl mx-auto">
+
+        <h2 class="section-title">Everything You Need</h2>
+
+        <p class="section-description">
+          Powerful features in a simple and elegant design,
+          created to support your everyday tasks.
+        </p>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+          <article class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3 class="text-xl font-bold mb-3">Smooth Performance</h3>
+            <p class="text-slate-600 leading-7">
+              Handle everyday work, online classes and multitasking
+              with a responsive computing experience.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">🖥️</div>
+            <h3 class="text-xl font-bold mb-3">Clear Display</h3>
+            <p class="text-slate-600 leading-7">
+              Enjoy a comfortable viewing experience for documents,
+              videos, presentations and creative work.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">🔋</div>
+            <h3 class="text-xl font-bold mb-3">All-Day Mobility</h3>
+            <p class="text-slate-600 leading-7">
+              A portable design made for studying, working and
+              travelling between your favourite places.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">🎒</div>
+            <h3 class="text-xl font-bold mb-3">Lightweight Design</h3>
+            <p class="text-slate-600 leading-7">
+              Carry your work with you in a sleek laptop design
+              that fits easily into your daily routine.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="benefits" class="bg-blue-50 py-20 px-5">
+      <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+
+        <div>
+          <img
+            class="w-full rounded-2xl shadow-lg"
+            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1100&q=85"
+            alt="Person working on a laptop">
+        </div>
+
+        <div>
+          <p class="text-blue-600 font-bold mb-3">WHY NOVABOOK?</p>
+
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Designed Around Your Everyday Life
+          </h2>
+
+          <p class="text-slate-600 leading-8 mb-6">
+            Whether you are attending online classes, building
+            projects, preparing presentations or working remotely,
+            NovaBook gives you a convenient place to get things done.
+          </p>
+
+          <ul class="space-y-4">
+            <li class="flex gap-3">
+              <span class="text-blue-600 font-bold">✓</span>
+              <span>Study and work from almost anywhere.</span>
+            </li>
+
+            <li class="flex gap-3">
+              <span class="text-blue-600 font-bold">✓</span>
+              <span>Keep your everyday tasks organised in one device.</span>
+            </li>
+
+            <li class="flex gap-3">
+              <span class="text-blue-600 font-bold">✓</span>
+              <span>Enjoy a modern look that suits your workspace.</span>
+            </li>
+
+            <li class="flex gap-3">
+              <span class="text-blue-600 font-bold">✓</span>
+              <span>Use a versatile laptop for learning and creativity.</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="reviews" class="py-20 px-5">
+      <div class="max-w-7xl mx-auto">
+
+        <h2 class="section-title">What Users Say</h2>
+
+        <p class="section-description">
+          See what different users might appreciate about a laptop
+          made for everyday tasks.
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-6">
+
+          <article class="review-card">
+            <p class="text-amber-500 text-xl mb-4">★★★★★</p>
+            <p class="text-slate-600 leading-7 mb-6">
+              "It looks simple and portable, which is what I want
+              in a laptop for college."
+            </p>
+            <h3 class="font-bold">Aarav Sharma</h3>
+            <p class="text-sm text-slate-500">College Student</p>
+          </article>
+
+          <article class="review-card">
+            <p class="text-amber-500 text-xl mb-4">★★★★★</p>
+            <p class="text-slate-600 leading-7 mb-6">
+              "I like the clean design. It would fit nicely into
+              my everyday work routine."
+            </p>
+            <h3 class="font-bold">Meera Kapoor</h3>
+            <p class="text-sm text-slate-500">Content Creator</p>
+          </article>
+
+          <article class="review-card">
+            <p class="text-amber-500 text-xl mb-4">★★★★★</p>
+            <p class="text-slate-600 leading-7 mb-6">
+              "The layout is clear, and I can find the main details
+              without searching around."
+            </p>
+            <h3 class="font-bold">Rohan Verma</h3>
+            <p class="text-sm text-slate-500">Working Professional</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="px-5 py-20 bg-slate-900 text-white">
+      <div class="max-w-3xl mx-auto text-center">
+
+        <p class="text-blue-300 font-bold mb-4">
+          YOUR NEXT CHAPTER STARTS HERE
+        </p>
+
+        <h2 class="text-3xl md:text-4xl font-bold mb-5">
+          Ready to Upgrade Your Everyday?
+        </h2>
+
+        <p class="text-slate-300 leading-7 mb-7">
+          Discover a laptop concept built around simplicity,
+          portability and productivity.
+        </p>
+
+        <div class="bg-white text-slate-900 rounded-2xl p-8 max-w-md mx-auto">
+          <h3 class="text-xl font-bold">NovaBook Essential</h3>
+
+          <p class="text-slate-500 mt-3">Illustrative project price</p>
+
+          <p class="text-4xl font-bold text-blue-600 my-4">
+            ₹49,999
+          </p>
+
+          <p class="text-slate-500 mb-6">
+            Example price for this student project.
+            Actual product specifications and availability are not verified.
+          </p>
+
+          <a href="mailto:hello@novabook.example?subject=NovaBook%20Enquiry"
+             class="primary-button w-full text-center">
+            Enquire Now →
+          </a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-slate-950 text-slate-300 px-5 py-10">
+    <div class="max-w-7xl mx-auto">
+
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+
+        <div>
+          <h2 class="text-2xl font-bold text-white mb-3">NovaBook.</h2>
+          <p class="text-sm leading-7">
+            A student-created product landing page showcasing
+            modern web design and responsive layouts.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-white mb-3">Quick Links</h3>
+          <div class="flex flex-col gap-3 text-sm">
+            <a href="#home" class="hover:text-white">Home</a>
+            <a href="#features" class="hover:text-white">Features</a>
+            <a href="#reviews" class="hover:text-white">Reviews</a>
+            <a href="#pricing" class="hover:text-white">Pricing</a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-white mb-3">Contact</h3>
+          <p class="text-sm mb-3">
+            Email:
+            <a href="mailto:hello@novabook.example" class="hover:text-white">
+              hello@novabook.example
+            </a>
+          </p>
+
+          <h3 class="font-bold text-white mb-3">Follow Us</h3>
+          <div class="flex gap-4 text-sm">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="border-t border-slate-700 mt-8 pt-6 text-center text-sm">
+        © 2026 NovaBook. Student minor project. All rights reserved.
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    const menuButton = document.getElementById("menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuButton.addEventListener("click", function () {
+      mobileMenu.classList.toggle("open");
+
+      const isOpen = mobileMenu.classList.contains("open");
+
+      menuButton.setAttribute("aria-expanded", isOpen);
+      menuButton.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu"
+      );
+    });
+
+    const mobileLinks = mobileMenu.querySelectorAll("a");
+
+    mobileLinks.forEach(function (link) {
+      link.addEventListener("click", function () {
+        mobileMenu.classList.remove("open");
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.setAttribute("aria-label", "Open navigation menu");
+      });
+    });
+  </script>
+
+</body>
+</html>
